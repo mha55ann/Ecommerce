@@ -64,7 +64,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Divider */}
+      {/* Divider*/}
       <div className="bg-[#b3b3b3] h-[1px]"></div>
     </>
   );
