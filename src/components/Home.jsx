@@ -1,11 +1,13 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
+
 function Home() {
   return (
     <>
-      <div className="grid grid-cols-12">
-        <div className="col-span-3 flex justify-center items-center">
-          <ul className="list-none space-y-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-12">
+        {/* Sidebar (Hidden on Small Screens) */}
+        <div className="hidden md:flex col-span-3 justify-center items-center">
+          <ul className="list-none space-y-2">
             <li>Woman’s Fashion</li>
             <li>Men’s Fashion</li>
             <li>Electronics</li>
@@ -17,7 +19,9 @@ function Home() {
             <li>Health & Beauty</li>
           </ul>
         </div>
-        <div className="col-span-9 px-10 p-6">
+
+        {/* Image Slider Section */}
+        <div className="col-span-9 w-full flex justify-center items-center p-3">
           <ImageSlider />
         </div>
       </div>

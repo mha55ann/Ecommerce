@@ -13,28 +13,31 @@ function Header() {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-12 p-7 items-center">
+      <div className="grid auto-cols-auto  md:grid-cols-12 md:p-7 items-center">
         {/* Logo */}
-        <div className="col-span-1 pl-1 md:col-span-3 text-xl font-bold md:pl-12">
-          Exclusive
+        
+        <div className="col-span-1 p-3 md:col-span-3 text-xl font-bold md:pl-12">
+        <div className=" flex justify-between pr-5">
+          <h1> Exclusive</h1>
+         
+         
+          <IoMenu onClick={handleMenuClick} className="text-2xl md:hidden " />
+        </div>
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden flex justify-end pr-5">
-          <IoMenu onClick={handleMenuClick} className="text-2xl cursor-pointer" />
-        </div>
-
-        {/* Mobile Menu */}
+    
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-md p-4 md:hidden">
-            <ul className="flex flex-col space-y-4 text-center">
-              <li><a href="/" className="hover:text-gray-600 transition-colors">Home</a></li>
-              <li><a href="/contact" className="hover:text-gray-600 transition-colors">Contact</a></li>
-              <li><a href="/about" className="hover:text-gray-600 transition-colors">About</a></li>
-              <li><a href="/signup" className="hover:text-gray-600 transition-colors">Sign Up</a></li>
-            </ul>
-          </div>
-        )}
+  <div className=" bg-white shadow-md p-4 md:hidden">
+    <ul className="flex flex-col space-y-4 text-center">
+      <li><a href="/" className="hover:text-gray-600 transition-colors">Home</a></li>
+      <li><a href="/contact" className="hover:text-gray-600 transition-colors">Contact</a></li>
+      <li><a href="/about" className="hover:text-gray-600 transition-colors">About</a></li>
+      <li><a href="/signup" className="hover:text-gray-600 transition-colors">Sign Up</a></li>
+    </ul>
+  </div>
+)}
+
 
         {/* Desktop Navigation Menu */}
         <nav className="hidden md:block md:col-span-5">
@@ -62,6 +65,8 @@ function Header() {
           <CiHeart className="text-3xl cursor-pointer hover:text-gray-600 transition-colors" />
           <IoCartOutline className="text-3xl cursor-pointer hover:text-gray-600 transition-colors" />
         </div>
+       
+
       </div>
 
       {/* Divider*/}

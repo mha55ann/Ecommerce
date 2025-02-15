@@ -12,7 +12,7 @@ import s4 from "../images/s4.png";
 
 const ImageSlider = () => {
   return (
-    <div className="w-[892px] h-[344px]">
+    <div className="w-full md:w-[65vw]   md:h-[50vh] h-[30vh] relative">
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -20,19 +20,35 @@ const ImageSlider = () => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg w-full h-full"
       >
         <SwiperSlide>
-          <img src={s1} alt="Slide 1" className="w-[892px] h-[344px]" />
+          <img
+            src={s1}
+            alt="Slide 1"
+            className="w-full md:w-[65vw]   md:h-[50vh] h-[30vh] "
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={s2} alt="Slide 2" className="w-[892px] h-[344px]" />
+          <img
+            src={s2}
+            alt="Slide 2"
+            className="w-full md:w-[65vw]   md:h-[50vh] h-[30vh]  "
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={s3} alt="Slide 3" className="w-[892px] h-[344px]" />
+          <img
+            src={s3}
+            alt="Slide 3"
+            className="w-full md:w-[65vw]    md:h-[50vh] h-[30vh] "
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={s4} alt="Slide 4" className="w-[892px] h-[344px]" />
+          <img
+            src={s4}
+            alt="Slide 4"
+            className="w-full md:w-[65vw]    md:h-[50vh] h-[30vh] "
+          />
         </SwiperSlide>
       </Swiper>
     </div>
